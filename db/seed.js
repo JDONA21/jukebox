@@ -7,7 +7,7 @@ console.log("🌱 Database seeded.");
 
 import { createTrack } from "#db/queries/tracks";
 import { createPlaylist } from "#db/queries/playlists";
-import { createPlaylistTrack } from "#db/queries/playlistsTracks";
+import { createPlaylistTrack } from "#db/queries/playlists_tracks";
 
 async function seed() {
   for (let i = 1; i <= 20; i++) {
@@ -15,7 +15,7 @@ async function seed() {
   }
 
   for (let i = 1; i <= 10; i++) {
-    await createPlaylist(`Playlist ${i}`, "foobarbaz");
+    await createPlaylist(`Playlist ${i}`, "2608 bootcamp");
 
     for (let j = 1; j <= 20; j++) {
       await createPlaylistTrack(i, j);
